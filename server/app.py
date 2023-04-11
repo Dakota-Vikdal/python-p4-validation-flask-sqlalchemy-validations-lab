@@ -1,4 +1,4 @@
-from flask import Flask, make_response
+from flask import Flask, make_response,session
 from flask_migrate import Migrate
 
 from models import db, Author, Post
@@ -14,6 +14,14 @@ db.init_app(app)
 @app.route('/')
 def index():
     return 'Validations lab'
+
+# @app.route('authors/<int:id>', methods['GET', 'POST'])
+# def authors():
+
+     
+
+
+
 
 if __name__ == '__main__':
     app.run(port=5555, debug=True)
